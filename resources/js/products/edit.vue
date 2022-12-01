@@ -1,6 +1,6 @@
 <script setup>
-import { onMounted, ref } from 'vue';
-import {useRouter} from 'vue-router';
+import { onMounted, ref } from 'vue'
+import {useRouter} from 'vue-router'
 
 let form = ref({
     id:'',
@@ -23,8 +23,9 @@ const props = defineProps({
     }
 })
 
-const router = useRouter()
+console.log(props)
 
+const router = useRouter()
 const getPhoto = () =>{
     let photo ="/upload/image.png"
     if(form.value.photo)
@@ -56,7 +57,7 @@ const updatePhoto = (e) => {
 }
 
 const getsingleProduct = async () => {
-    let response = await axios.get(`/api/get_edit_product/${props.id}`);
+    let response = await axios.get(`/api/get_edit_product/${props.id}`)
     form.value = response.data.product
 }
 
@@ -81,10 +82,12 @@ const updateProduct = () => {
 
         router.push('/')
 
-        toStatement.fire({
+        toast.fire({
             icon:"success",
             title:"Ürün başarıyla güncellendi."
         })
+
+
     })
     .catch((error) => {
 
@@ -102,7 +105,7 @@ const updateProduct = () => {
            </div>
            <div class="products__create__titlebar--item">
 
-               <button class="btn btn-secondary ml-1" >
+               <button class="btn btn-secondary ml-1" @click="updateProduct()">
                    Save
                </button>
            </div>
