@@ -1,4 +1,6 @@
 <script setup>
+import axios from "axios";
+import { Swal } from "sweetalert2/dist/sweetalert2";
 import {onMounted,ref} from "vue"
 import {useRouter} from "vue-router"
 
@@ -26,6 +28,56 @@ const ourImage = (img) =>{
 const onEdit = (id) => {
     router.push('/product/edit/'+id)
 }
+
+const deleteProduct = (id) => {
+    axios.get('/api/delete_product/'+id)
+            .then(()=>{
+                // Swal.fire(
+                //     'Delete',
+                //     'Ürün başarıyla silindi',
+                //     'success'
+                // )
+
+                toast.fire({
+                    icon:"warning",
+                    title:"Ürün başarıyla silindi.."
+                })
+                
+
+                getProducts()
+            })
+            .catch(()=>{
+                //Swal.fire("Başarısız!","There was something wrong.","Warning")
+            })
+ 
+    // Swal.fire({
+    //     title:'Are you Sure?',
+    //     text:"You can't go back",
+    //     icon:"warning",
+    //     showCancelButton:true,
+    //     confirmButtonColor:'#3085d6',
+    //     cancelButtonText:'#d33',
+    //     confirmButtonText:'Yes, delete it!'
+    // })
+    // .then((result) =>{
+    //     if(result.value){
+    //         axios.get('/api/delete_product/'+id)
+    //         .then(()=>{
+    //             Swal.fire(
+    //                 'Delete',
+    //                 'Ürün başarıyla silindi',
+    //                 'success'
+    //             )
+
+    //             getProducts()
+    //         })
+    //         .catch(()=>{
+    //             Swal.fire("Başarısız!","There was something wrong.","Warning")
+    //         })
+    //     }
+    // })
+}
+
 </script>
 
 <template>
@@ -45,11 +97,11 @@ const onEdit = (id) => {
 
             <div class="table--heading mt-2 products__list__heading " style="padding-top: 20px;background:#FFF">
                 <!-- <p class="table--heading--col1">&#32;</p> -->
-                <p class="table--heading--col1">image</p>
+                <p class="table--heading--col1">Resim</p>
                 <p class="table--heading--col2">
                     Ürün
                 </p>
-                <p class="table--heading--col4">Type</p>
+                <p class="table--heading--col4">Tip</p>
                 <p class="table--heading--col3">
                     Inventory
                 </p>
@@ -75,7 +127,7 @@ const onEdit = (id) => {
                     <button class="btn-icon btn-icon-success" @click="onEdit(item.id)">
                         <i class="fas fa-pencil-alt"></i>
                     </button>
-                    <button class="btn-icon btn-icon-danger" >
+                    <button class="btn-icon btn-icon-danger" @click="deleteProduct(item.id)">
                         <i class="far fa-trash-alt"></i>
                     </button>
                 </div>

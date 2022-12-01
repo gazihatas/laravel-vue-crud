@@ -3,7 +3,10 @@ require('./bootstrap');
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/dist/sweetalert2.css'
 
+
+
 window.Swal = Swal;
+
 const toast = Swal.mixin({
     toast:true,
     position:'top-end',
@@ -13,7 +16,7 @@ const toast = Swal.mixin({
 });
 window.toast = toast;
 
-import {createApp} from "vue";
+import {createApp, VueElement} from "vue";
 
 import router from "./router"
 

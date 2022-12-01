@@ -56,7 +56,7 @@ class ProductController extends Controller
     public function update_product(Request $request, $id)
     {
         $product = Product::find($id);
-        
+
         $product->name = $request->name;
         $product->description = $request->description;
 
@@ -82,5 +82,16 @@ class ProductController extends Controller
         $product->quantity = $request->quantity;
         $product->price = $request->price;
         $product->save();
+    }
+
+    public function delete_product($id)
+    {
+        $product = Product::findOrFail($id);
+        $image_path = public_path()."/upload/";
+        $image = $image_path.$product->photo;
+        if(file_exists($image)){
+            @unlink($image);
+        }
+        $product->delete();
     }
 }
