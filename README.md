@@ -7,7 +7,7 @@
 
 
 ## Laravel 9 + Vuejs 3 CRUD APP
-
+![](/public/images/laravel-vue-crud.gif)
 
 ## License
 [MIT license](https://opensource.org/licenses/MIT).
