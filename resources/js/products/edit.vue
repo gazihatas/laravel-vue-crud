@@ -103,12 +103,14 @@ const updateProduct = () => {
 
                <h1 class="my-1 text-warning">Ürün Düzenle</h1>
            </div>
+           <!--
            <div class="products__create__titlebar--item">
 
                <button class="btn btn-secondary ml-1" @click="updateProduct()">
                    Save
                </button>
            </div>
+           -->
        </div>
 
        <div class="products__create__cardWrapper mt-2">

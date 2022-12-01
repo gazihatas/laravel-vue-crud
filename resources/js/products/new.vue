@@ -83,12 +83,14 @@ const saveProduct = ()=>{
 
             <h1 class="my-1 text-warning">Ürün Ekle</h1>
         </div>
+        <!--
         <div class="products__create__titlebar--item">
 
             <button class="btn btn-secondary ml-1"  @click="saveProduct()">
                 Kaydet
             </button>
         </div>
+        -->
     </div>
 
     <div class="products__create__cardWrapper mt-2">
