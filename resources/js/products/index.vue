@@ -42,14 +42,14 @@ const deleteProduct = (id) => {
                     icon:"warning",
                     title:"Ürün başarıyla silindi.."
                 })
-                
+
 
                 getProducts()
             })
             .catch(()=>{
                 //Swal.fire("Başarısız!","There was something wrong.","Warning")
             })
- 
+
     // Swal.fire({
     //     title:'Are you Sure?',
     //     text:"You can't go back",
@@ -86,7 +86,7 @@ const deleteProduct = (id) => {
 
             <div class="customers__titlebar dflex justify-content-between align-items-center">
                 <div class="customers__titlebar--item">
-                    <h1 class="my-1">Ürünler</h1>
+                    <h1 class="my-1 text-warning">Ürünler</h1>
                 </div>
                 <div class="customers__titlebar--item">
                     <button class="btn btn-secondary my-1" @click="newProduct">

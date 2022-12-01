@@ -20545,7 +20545,7 @@ var _hoisted_3 = {
 var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "products__create__titlebar--item"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
-  "class": "my-1"
+  "class": "my-1 text-warning"
 }, "Ürün Düzenle")], -1 /* HOISTED */);
 var _hoisted_5 = {
   "class": "products__create__titlebar--item"
@@ -20690,7 +20690,7 @@ var _hoisted_2 = {
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "customers__titlebar--item"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
-  "class": "my-1"
+  "class": "my-1 text-warning"
 }, "Ürünler")], -1 /* HOISTED */);
 var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"table--heading mt-2 products__list__heading\" style=\"padding-top:20px;background:#FFF;\"><!-- &lt;p class=&quot;table--heading--col1&quot;&gt;&amp;#32;&lt;/p&gt; --><p class=\"table--heading--col1\">Resim</p><p class=\"table--heading--col2\"> Ürün </p><p class=\"table--heading--col4\">Tip</p><p class=\"table--heading--col3\"> Inventory </p><!-- &lt;p class=&quot;table--heading--col5&quot;&gt;&amp;#32;&lt;/p&gt; --><p class=\"table--heading--col5\">actions</p></div>", 1);
 var _hoisted_5 = {
@@ -20785,7 +20785,7 @@ var _hoisted_3 = {
 var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "products__create__titlebar--item"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
-  "class": "my-1"
+  "class": "my-1 text-warning"
 }, "Ürün Ekle")], -1 /* HOISTED */);
 var _hoisted_5 = {
   "class": "products__create__titlebar--item"

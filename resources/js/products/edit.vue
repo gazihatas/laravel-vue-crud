@@ -101,7 +101,7 @@ const updateProduct = () => {
        <div class="products__create__titlebar dflex justify-content-between align-items-center">
            <div class="products__create__titlebar--item">
 
-               <h1 class="my-1">Ürün Düzenle</h1>
+               <h1 class="my-1 text-warning">Ürün Düzenle</h1>
            </div>
            <div class="products__create__titlebar--item">
 
